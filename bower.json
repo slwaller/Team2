@@ -1,0 +1,21 @@
+{
+  "name": "Team2",
+  "version": "0.0.0",
+  "homepage": "https://github.com/natalie03/Team2",
+  "authors": [
+    "Natalie Miller <nataliemiller03@gmail.com>"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "~1.2.24",
+    "angular-route": "~1.2.24",
+    "angular-bootstrap": "~0.11.0"
+  }
+}
