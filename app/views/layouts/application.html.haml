@@ -5,5 +5,12 @@
     = stylesheet_link_tag 'application', media: 'all'
     = javascript_include_tag 'application'
     = csrf_meta_tags
+<<<<<<< HEAD
   %body{"ng-app" => "cdpApp"}
 = yield
+=======
+  %body{"ng-app"=> "cdpApp"}
+    %p.notice= notice
+    %p.alert= alert
+    = yield
+>>>>>>> 02c61583c6c2cf1b4617a917db967fd6212376cd
