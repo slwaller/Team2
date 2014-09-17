@@ -17,6 +17,7 @@ gem 'devise'
 gem 'haml-rails'
 gem 'quiet_assets'
 gem 'html2haml'
+gem 'workflow'
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
 # Turbolinks makes following links in your web application faster. Read more: https://github.com/rails/turbolinks
