@@ -5,6 +5,10 @@ angular.module("cdpApp", [
   "userSvc"])
     .config(function($routeProvider){
       $routeProvider
+      .when("/", {
+        templateUrl: "../assets/profileForm.html",
+        controller: "userCtrl"
+        })
         .when("/user", {
           templateUrl: "../assets/profile.html",
           controller: "userCtrl"
