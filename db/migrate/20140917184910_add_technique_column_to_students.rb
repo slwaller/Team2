@@ -1,5 +1,5 @@
 class AddTechniqueColumnToStudents < ActiveRecord::Migration
   def change
-    add_column :students, :techique, :string
+    add_column :students, :technique, :string
   end
 end
