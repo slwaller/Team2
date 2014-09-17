@@ -12,5 +12,5 @@
  *
  *= require_tree .
  *= require_self
- *= require ui-bootstrap.min
+ *= require bootstrap
  */
