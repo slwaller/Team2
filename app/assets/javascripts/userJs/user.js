@@ -1,4 +1,3 @@
-
 angular.module("cdpApp", [
   "ngRoute",
   "userCtrl",
