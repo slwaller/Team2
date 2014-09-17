@@ -7,10 +7,11 @@
     = javascript_include_tag 'application'
     = csrf_meta_tags
     %link{:href => "http://fonts.googleapis.com/css?family=Open+Sans+Condensed:300", :rel => "stylesheet", :type => "text/css"}/
+  .pull-right.userlinks
+    = user_login_links
   %body
     %p.notice= notice if notice
     %p.alert= alert if alert
-    user_login_links
     = yield
 
     %script{:src => "https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"}
