@@ -1,0 +1,11 @@
+= link_to "New Student", new_student_path
+%br
+-@students.each do |student|
+  = link_to "#{student.first_name}  #{student.last_name}", student_path(student)
+  = student.first_name
+  = student.last_name
+  = student.bio
+  = student.github
+
+  = link_to "Edit", edit_student_path(student)
+  = link_to "Delete", student_path(student), method: :delete
