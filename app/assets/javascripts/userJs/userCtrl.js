@@ -1,5 +1,4 @@
 angular.module("cdpApp")
-  .factory('userCtrl', function ($route, $rootScope, $log, userSvc) {
-
+  .controller('userCtrl', function ($route, $rootScope, $log, userSvc) {
 
   });
