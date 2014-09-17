@@ -5,9 +5,9 @@ angular.module("cdpApp", [
   "userSvc"])
     .config(function($routeProvider){
       $routeProvider
-      .when("/", {
-        templateUrl: "../assets/profileForm.html",
-        controller: "userCtrl"
+        .when("/", {
+          templateUrl: "../assets/main.html",
+          controller: "userCtrl"
         })
         .when("/user", {
           templateUrl: "../assets/profile.html",
@@ -15,6 +15,10 @@ angular.module("cdpApp", [
         })
         .when("/match", {
           templateUrl: "../assets/matches.html",
+          controller: "userCtrl"
+        })
+        .when("/student/:id", {
+          templateUrl: "../assets/viewProfile.html",
           controller: "userCtrl"
         })
     });

@@ -1,1 +1,14 @@
-<h1>HELLO YOU'RE ON MAIN.HTML</h1>
+<h1>Welcome to CoDependent</h1>
+
+<h2>Users:</h2>
+
+<div ng-repeat="profile in students">
+  <img src="http://placecage.com/c/100/100" alt="">
+  <a href="#/student/{{profile.id}}"><h1>{{profile.first_name}} {{profile.last_name}}</h1></a>
+  <a href="https://github.com/{{profile.github}}">{{profile.github}}</a>
+  <p>{{profile.bio}}</p>
+
+
+
+
+</div>
