@@ -4,11 +4,16 @@ angular.module("cdpApp")
     var singleStudentUrl = "/students/:id.json"
 
     var getStudents = function(){
-      return $http.get(studentsUrl)
-    }
+      return $http.get(studentsUrl);
+    };
+
+    var getStudentProfile = function(){
+      return $http.get(singleStudentUrl);
+    };
 
     return{
-      getStudents: getStudents
+      getStudents: getStudents,
+      getStudentProfile: getStudentProfile
 
     }
 
