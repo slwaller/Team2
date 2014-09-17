@@ -1,8 +1,25 @@
-%h1 Show
+.jumbotron
+  %center
+    %h1 Student Show Page
+    %strong
+      First Name
+    = @student.first_name
+    %br
+    %strong
+      Last Name
+    = @student.last_name
+    %br
+    %strong
+      Bio
+    = @student.bio
+    %br
+    %strong
+      Email
+    = @student.email
+    %br
+    %strong
+      Github
+    = @student.github
+    %br
 
-= @student.first_name
-= @student.last_name
-= @student.bio
-= @student.github
 
-= link_to "Back", root_path
