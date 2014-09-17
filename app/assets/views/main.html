@@ -4,7 +4,7 @@
 
 <div ng-repeat="profile in students">
   <img src="http://placecage.com/c/100/100" alt="">
-  <h1>{{profile.first_name}} {{profile.last_name}}</h1>
+  <a href="#/student/{{profile.id}}"><h1>{{profile.first_name}} {{profile.last_name}}</h1></a>
   <a href="https://github.com/{{profile.github}}">{{profile.github}}</a>
   <p>{{profile.bio}}</p>
 
