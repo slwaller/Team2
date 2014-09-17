@@ -11,7 +11,7 @@ class StudentsController < ApplicationController
 
   def create
     @student = Student.create student_params
-    redirect_to root_path
+    #redirect_to students_path
   end
 
   def edit
@@ -21,7 +21,7 @@ class StudentsController < ApplicationController
   def update
     @student = Student.find params[:id]
     @student.update_attributes student_params
-    redirect_to root_path
+    #redirect_to students_path
   end 
 
   def show
@@ -31,7 +31,7 @@ class StudentsController < ApplicationController
   def destroy
     @student = Student.find params[:id]
     @student.delete
-    redirect_to root_path
+    #redirect_to students_path
   end
 
 
