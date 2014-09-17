@@ -7,7 +7,6 @@ class StudentsController < ApplicationController
     respond_to do |format|
       format.json { render json: @students.as_json }
     end
-
   end
 
   def new
@@ -19,7 +18,6 @@ class StudentsController < ApplicationController
     respond_to do |format|
       format.json { render json: @student.as_json }
     end
-    redirect_to students_path
   end
 
   def edit
@@ -29,12 +27,10 @@ class StudentsController < ApplicationController
   def update
     @student = Student.find params[:id]
     @student.update_attributes student_params
-
     respond_to do |format|
       format.json { render json: @student.as_json }
     end
-    redirect_to students_path
-  end 
+  end
 
   def show
     @student = Student.find params[:id]
@@ -43,11 +39,9 @@ class StudentsController < ApplicationController
   def destroy
     @student = Student.find params[:id]
     @student.delete
-
     respond_to do |format|
       format.json { render json: @delete.as_json }
     end
-    redirect_to students_path
   end
 
 
