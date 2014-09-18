@@ -12,12 +12,16 @@ class UsersController < ApplicationController
     @user = User.new
   end
 
+
+  def new
+    @user = User.new
+  end
+
   def create
     @user = User.create user_params
     respond_to do |format|
       format.json { render json: @user.as_json }
     end
-    redirect_to users_path
   end
 
   def edit
@@ -34,18 +38,16 @@ class UsersController < ApplicationController
 
   def show
     @user = User.find params[:id]
-
-
     respond_to do |format|
       format.json { render json: @user.as_json }
     end
-    redirect_to users_path
   end
+
+
 
   def destroy
     @user = User.find params[:id]
     @user.delete
-
     respond_to do |format|
       format.json { render json: @user.as_json }
     end
@@ -79,7 +81,6 @@ class UsersController < ApplicationController
 
 private
   def user_params
-
     params.require(:user).permit(:first_name, :last_name, :bio, :github, :email, :strengths, :weakness)
   end
 end
