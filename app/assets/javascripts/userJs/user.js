@@ -9,6 +9,10 @@ angular.module("cdpApp", [
           templateUrl: "../assets/main.html",
           controller: "userCtrl"
         })
+        .when("/create", {
+          templateUrl: "../assets/newStudent.html",
+          controller: "userCtrl"
+        })
         .when("/user", {
           templateUrl: "../assets/profile.html",
           controller: "userCtrl"
