@@ -40,6 +40,8 @@ class UsersController < ApplicationController
     end
   end
 
+
+
   def show
     @user = User.find params[:id]
     respond_to do |format|
@@ -85,6 +87,12 @@ class UsersController < ApplicationController
 
 private
   def user_params
+
+
     params.require(:user).permit(:first_name, :last_name, :bio, :github, :email, :strengths, :weakness)
+
+
+    params.require(:user).permit(:first_name, :last_name, :bio, :github, :email, :strengths, :weakness)
+
   end
 end
