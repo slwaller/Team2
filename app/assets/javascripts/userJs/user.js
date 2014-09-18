@@ -1,8 +1,8 @@
-
 angular.module("cdpApp", [
   "ngRoute",
   "userCtrl",
-  "userSvc"])
+  "userSvc",
+  "ui.bootstrap"])
     .config(function($routeProvider){
       $routeProvider
         .when("/", {

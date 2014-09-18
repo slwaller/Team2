@@ -1,3 +1,130 @@
-body{
+$black: rgb(24, 24, 24);
+$grey: rgb(48, 48, 48);
+$sea: rgb(161, 226, 214);
+$ltgrey: rgb(71, 71, 71);
+
+
+.appBody{
+  margin: 0;
   font-family: 'Open Sans Condensed';
+  width: 100%;
+  color: $ltgrey;
+}
+
+/* MENU ICON NAV AT TOP */
+.menuNav{
+  width: 100%;
+  text-align: right;
+  font-family: 'Open Sans Condensed';
+  padding: 0;
+  margin: 0;
+  span{
+    padding-right: 20px;
+  }
+  a{
+    font-size: 35px;
+    color: lightgrey;
+    text-align: right;
+  }
+  a:hover{
+    color: $sea;
+    cursor: pointer;
+  }
+  .userlinks{
+    a{
+      padding-right: 20px;
+      font-size: 25px;
+      display: block;
+      clear: both;
+    }
+  }
+}
+
+/* LOGIN PAGE STUFF */
+.loginPage{
+  width: 28%;
+  margin: auto;
+  margin-bottom: 50px;
+  h2{
+    font-size: 50px;
+    text-align: center;
+  }
+  .logEmail{
+    label{
+      font-size: 25px;
+    }
+    input{
+      color: $grey;
+    }
+  }
+  .logPW{
+    label{
+      font-size: 25px;
+    }
+    input{
+      color: $grey;
+    }
+  }
+  .logCheck{
+    label{
+      font-size: 18px;
+    }
+  }
+  .logCheck{
+    label{
+      font-size: 18px;
+    }
+  }
+  .loginButton{
+    color: $black;
+  }
+}
+.logForm{
+  width: 55%;
+  margin: auto;
+}
+.logo{
+  width: 50%;
+  height: 350px;
+  margin: auto;
+  clear: both;
+  background-image: url("logo1.gif");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  .codependent{
+    margin: 0;
+    font-size: 78px;
+    font-weight: bold;
+    position: absolute;
+    color: $ltgrey;
+    top: 20%;
+    left: 32%;
+    text-shadow: 0px 1px 6px $ltgrey;
+  }
+}
+
+/* MAIN.HTML */
+.container{
+  .logo{
+    width: 50%;
+    height: 350px;
+    margin: auto;
+    clear: both;
+    position: relative;
+    background-image: url("logo1.gif");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    .codependent{
+      margin: 0;
+      font-size: 78px;
+      font-weight: bold;
+      position: absolute;
+      color: $ltgrey;
+      top: 36%;
+      left: 7%;
+      text-shadow: 0px 1px 6px $ltgrey;
+    }
+  }
 }
