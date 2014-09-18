@@ -2,6 +2,7 @@ $black: rgb(24, 24, 24);
 $grey: rgb(48, 48, 48);
 $sea: rgb(161, 226, 214);
 $ltgrey: rgb(71, 71, 71);
+$bkg: rgb(5, 5, 5);
 
 
 .appBody{
@@ -9,6 +10,7 @@ $ltgrey: rgb(71, 71, 71);
   font-family: 'Open Sans Condensed';
   width: 100%;
   color: $ltgrey;
+  background-color: $bkg;
 }
 
 /* MENU ICON NAV AT TOP */
@@ -88,16 +90,16 @@ $ltgrey: rgb(71, 71, 71);
   height: 350px;
   margin: auto;
   clear: both;
-  background-image: url("logo1.gif");
+  background-image: url("giphy.gif");
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
   .codependent{
     margin: 0;
     font-size: 78px;
-    font-weight: bold;
+    font-weight: lighter;
     position: absolute;
-    color: $ltgrey;
+    color: white;
     top: 20%;
     left: 32%;
     text-shadow: 0px 1px 6px $ltgrey;
@@ -112,16 +114,16 @@ $ltgrey: rgb(71, 71, 71);
     margin: auto;
     clear: both;
     position: relative;
-    background-image: url("logo1.gif");
+    background-image: url("giphy.gif");
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
     .codependent{
       margin: 0;
       font-size: 78px;
-      font-weight: bold;
+      font-weight: lighter;
       position: absolute;
-      color: $ltgrey;
+      color: white;
       top: 36%;
       left: 7%;
       text-shadow: 0px 1px 6px $ltgrey;

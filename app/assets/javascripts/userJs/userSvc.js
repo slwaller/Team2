@@ -7,8 +7,8 @@ angular.module("cdpApp")
       return $http.get(studentsUrl);
     };
 
-    var getStudentProfile = function(){
-      return $http.get(singleStudentUrl);
+    var getStudentProfile = function(id){
+      return $http.get(studentsUrl + "/" + id);
     };
 
     var createStud = function(student){
