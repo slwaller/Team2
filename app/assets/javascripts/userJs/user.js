@@ -9,14 +9,11 @@ angular.module("cdpApp", [
           templateUrl: "../assets/main.html",
           controller: "userCtrl"
         })
-        .when("/create", {
-          templateUrl: "../assets/newStudent.html",
-          controller: "userCtrl"
-        })
-        .when("/user", {
+        .when("/profile", {
           templateUrl: "../assets/profile.html",
           controller: "userCtrl"
         })
+
         .when("/match", {
           templateUrl: "../assets/matches.html",
           controller: "userCtrl"
