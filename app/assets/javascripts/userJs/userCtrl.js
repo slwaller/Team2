@@ -1,13 +1,20 @@
 angular.module("cdpApp")
-  .controller('userCtrl', function ($route, $rootScope, $scope, $log, userSvc) {
+  .controller('userCtrl', function ($route, $rootScope, $routeParams, $scope, $log, userSvc) {
     userSvc.getStudents().success(function(students){
       $scope.students = students;
 
     });
 
-    userSvc.getStudentProfile().success(function(student){
+    userSvc.getStudentProfile($routeParams.idx).success(function(student){
       $scope.student = student;
+      console.log(student);
 
     });
+
+    var createStudent = function (student){
+
+      userSvc.createStud(student);
+    };
+
 
   });

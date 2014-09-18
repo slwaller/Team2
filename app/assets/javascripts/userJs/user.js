@@ -1,18 +1,19 @@
-
 angular.module("cdpApp", [
   "ngRoute",
   "userCtrl",
-  "userSvc"])
+  "userSvc",
+  "ui.bootstrap"])
     .config(function($routeProvider){
       $routeProvider
         .when("/", {
           templateUrl: "../assets/main.html",
           controller: "userCtrl"
         })
-        .when("/user", {
+        .when("/profile", {
           templateUrl: "../assets/profile.html",
           controller: "userCtrl"
         })
+
         .when("/match", {
           templateUrl: "../assets/matches.html",
           controller: "userCtrl"

@@ -1,16 +1,23 @@
-%h2 LOG IN
-= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f|
-  %div
-    = f.label :EMAIL
-    %br/
-    = f.email_field :email, autofocus: true
-  %div
-    = f.label :PASSWORD
-    %br/
-    = f.password_field :password, autocomplete: "off"
-  - if devise_mapping.rememberable?
-    %div
-      = f.check_box :remember_me
-      = f.label :remember_me
-  %div= f.submit "Log in"
-= render "devise/shared/links"
+%div.logo
+  %h1.codependent
+    CODEPENDENT
+
+%div.container
+  %div.loginPage
+    %h2 LOG IN
+    %div.logForm
+      = form_for(resource, as: resource_name, url: session_path(resource_name)) do |f|
+        %div.logEmail
+          = f.label :EMAIL
+          %br
+          = f.email_field :email, autofocus: true
+        %div.logPW
+          = f.label :PASSWORD
+          %br
+          = f.password_field :password, autocomplete: "off"
+        - if devise_mapping.rememberable?
+          %div.logCheck
+            = f.check_box :remember_me
+            = f.label :remember_me
+        %div.loginButton= f.submit "LOG IN"
+      = render "devise/shared/links"

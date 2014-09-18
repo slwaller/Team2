@@ -15,4 +15,6 @@
 //= require bootstrap
 //= require angular.min
 //= require angular-route.min
+//= require ui-bootstrap.min
+//= require ui-bootstrap-tpls.min
 //= require_tree ./userJs
