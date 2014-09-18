@@ -1,10 +1,10 @@
 <div class="container">
-  <h1>{{user.first_name}} {{user.last_name}}</h1>
+  <h1>{{currentUser.first_name}} {{currentUser.last_name}}</h1>
   <a href="/users/edit">Edit Profile</a>
   <div class="bio">
     <h2>About Me</h2>
     <div class="navbar">
-      <a href="">{{currentUser.github}}</a>
+      <a href="http://github.com/{currentUser.github}}">{{currentUser.github}}</a>
       <a href="mailto:{{currentUser.email}}">{{currentUser.email}}</a>
 
     </div>
@@ -13,12 +13,14 @@
   <div class="skills">
     <h2>Current Strength</h2>
       <ul>
-        <li>{{currentUser.strength}} - <a href="">Get Help</a></li>
+        <li>{{currentUser.strengths}}
       </ul>
     <h2>I Need Help With </h2>
       <ul>
-        <li>{{currentUser.weakness}}</li>
-
+        <li>{{currentUser.weakness}} - <a href="">Get Help</a></li>
+        <ul ng-repeat="user in Users | matchFilter : currentUser">
+          <li>{{user.first_name}}</li>
+        </ul>
       </ul>
   </div>
 </div>
@@ -30,23 +32,7 @@
   <textarea name="bio" placeholder="Bio" ng-model="currentUser.bio" id="" cols="30" rows="10">{{currentUser.bio}}</textarea>
   <br>
   <p>Strengths</p>
-<!--   <form action="">
-  <input type="checkbox"  value="HTML/CSS">HTML/CSS<br>
-  <input type="checkbox"  value="Ruby/Rails">Ruby/Rails <br>
-  <input type="checkbox"  value="Angular, jQuery, Underscore"> Angular, jQuery, Underscore <br>
-  <input type="checkbox"  value="Git/Heroku"> Git/Heroku <br>
-  <input type="checkbox"  value="mySQL/Mongo"> mySQL/Mongo
-</form>
-<br>
-<p>I need help with:</p>
-<form action="">
-  <input type="checkbox"  value="HTML/CSS">HTML/CSS<br>
-  <input type="checkbox"  value="Ruby/Rails">Ruby/Rails <br>
-  <input type="checkbox"  value="Angular, jQuery, Underscore"> Angular, jQuery, Underscore <br>
-  <input type="checkbox"  value="Git/Heroku"> Git/Heroku <br>
-  <input type="checkbox"  value="mySQL/Mongo"> mySQL/Mongo
-</form>
- -->
+
   <button type="submit">Submit</button>
 
 </form>
