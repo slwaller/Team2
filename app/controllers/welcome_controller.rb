@@ -2,7 +2,7 @@ class WelcomeController < ApplicationController
   before_action :authenticate_user!
 
   def index
-    @students = Student.all
+    @users = User.all
   end
   
 end
