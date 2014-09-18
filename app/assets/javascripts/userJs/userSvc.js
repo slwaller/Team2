@@ -1,26 +1,26 @@
 angular.module("cdpApp")
   .factory('userSvc', function ($route, $rootScope, $log, $http) {
-    var studentsUrl = "/students.json"
-    var singleStudentUrl = "/students/#{id}.json"
+    var usersUrl = "/users.json"
+    var singleStudentUrl = "/users/#{id}.json"
 
-    var getStudents = function(){
-      return $http.get(studentsUrl);
+    var getUsers = function(){
+      return $http.get(usersUrl);
     };
 
-    var getStudentProfile = function(id){
-      return $http.get(studentsUrl + "/" + id);
+    var getUserProfile = function(id){
+      return $http.get(usersUrl + "/" + id);
     };
 
-    var createStud = function(student){
-      return $http.post(student);
+    var createUser = function(user){
+      return $http.post(user);
     };
 
 
 
     return{
-      getStudents: getStudents,
-      getStudentProfile: getStudentProfile,
-      createStud: createStud
+      getUsers: getUsers,
+      getUserProfile: getUserProfile,
+      createUser: createUser
 
     }
 

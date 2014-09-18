@@ -13,17 +13,28 @@
 
 ActiveRecord::Schema.define(version: 20140918134950) do
 
-  create_table "students", force: true do |t|
-    t.string   "first_name"
-    t.string   "last_name"
-    t.string   "bio"
-    t.string   "github"
+  # create_table "students", force: true do |t|
+  #   t.string   "first_name"
+  #   t.string   "last_name"
+  #   t.string   "bio"
+  #   t.string   "github"
+  #   t.datetime "created_at"
+  #   t.datetime "updated_at"
+  #   t.string   "email"
+  #   t.string   "techique"
+  #   t.string   "workflow_state"
+  #   t.string   "technique"
+  # end
+
+  create_table "techniques", force: true do |t|
+    t.string   "technique"
     t.datetime "created_at"
     t.datetime "updated_at"
     t.string   "email"
     t.string   "techique"
     t.string   "workflow_state"
     t.string   "technique"
+
   end
 
   create_table "techniques", force: true do |t|
