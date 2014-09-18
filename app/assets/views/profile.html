@@ -1,52 +1,52 @@
 <div class="container">
   <h1>{{user.first_name}} {{user.last_name}}</h1>
-  <a href="" ng-click="edit=!edit">Edit Profile</a>
+  <a href="/users/edit">Edit Profile</a>
   <div class="bio">
     <h2>About Me</h2>
     <div class="navbar">
-      <a href="">{{user.github}}</a>
-      <a href="mailto:{{user.email}}">email link</a>
+      <a href="">{{currentUser.github}}</a>
+      <a href="mailto:{{currentUser.email}}">{{currentUser.email}}</a>
 
     </div>
-    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eaque rerum corporis at officia aliquid eum. Natus nobis ratione, voluptas asperiores, odit similique accusamus! Alias facilis nemo, labore esse expedita, ullam?</p>
+    <p>{{currentUser.bio}}</p>
   </div>
   <div class="skills">
-    <h2>My Strengths</h2>
-      <ul ng-repeat="strength in user.strengths">
-        <li>{{strength}} - <a href="" ng-click="match({{strength}})">Get Help</a></li>
+    <h2>Current Strength</h2>
+      <ul>
+        <li>{{currentUser.strength}} - <a href="">Get Help</a></li>
       </ul>
     <h2>I Need Help With </h2>
-      <ul ng-repeat="strug in user.strugs">
-        <li>{{strug}}</li>
+      <ul>
+        <li>{{currentUser.weakness}}</li>
 
       </ul>
   </div>
 </div>
 <div class="edit" ng-show="edit">
-<form action="" ng-submit="editUser(newUser)" >
-  <input type="text" ng-model="newUser.first_name" placeholder="First Name">
-  <input type="text" ng-model="newUser.last_name" placeholder="Last Name">
-  <input type="text" ng-model="newUser.github" placeholder="Github Username">
-  <textarea name="bio" placeholder="Bio" ng-model="newUser.bio" id="" cols="30" rows="10"></textarea>
+<form action="" ng-submit="editUser($index)" >
+  <input type="text" ng-model="currentUser.first_name" placeholder="{{currentUser.first_name}}">
+  <input type="text" ng-model="currentUser.last_name" placeholder="{{currentUser.last_name}}">
+  <input type="text" ng-model="currentUser.github" placeholder="{{currentUser.github}}">
+  <textarea name="bio" placeholder="Bio" ng-model="currentUser.bio" id="" cols="30" rows="10">{{currentUser.bio}}</textarea>
   <br>
   <p>Strengths</p>
-  <form action="">
-    <input type="checkbox"  value="HTML/CSS">HTML/CSS<br>
-    <input type="checkbox"  value="Ruby/Rails">Ruby/Rails <br>
-    <input type="checkbox"  value="Angular, jQuery, Underscore"> Angular, jQuery, Underscore <br>
-    <input type="checkbox"  value="Git/Heroku"> Git/Heroku <br>
-    <input type="checkbox"  value="mySQL/Mongo"> mySQL/Mongo
-  </form>
-  <br>
-  <p>I need help with:</p>
-  <form action="">
-    <input type="checkbox"  value="HTML/CSS">HTML/CSS<br>
-    <input type="checkbox"  value="Ruby/Rails">Ruby/Rails <br>
-    <input type="checkbox"  value="Angular, jQuery, Underscore"> Angular, jQuery, Underscore <br>
-    <input type="checkbox"  value="Git/Heroku"> Git/Heroku <br>
-    <input type="checkbox"  value="mySQL/Mongo"> mySQL/Mongo
-  </form>
-
+<!--   <form action="">
+  <input type="checkbox"  value="HTML/CSS">HTML/CSS<br>
+  <input type="checkbox"  value="Ruby/Rails">Ruby/Rails <br>
+  <input type="checkbox"  value="Angular, jQuery, Underscore"> Angular, jQuery, Underscore <br>
+  <input type="checkbox"  value="Git/Heroku"> Git/Heroku <br>
+  <input type="checkbox"  value="mySQL/Mongo"> mySQL/Mongo
+</form>
+<br>
+<p>I need help with:</p>
+<form action="">
+  <input type="checkbox"  value="HTML/CSS">HTML/CSS<br>
+  <input type="checkbox"  value="Ruby/Rails">Ruby/Rails <br>
+  <input type="checkbox"  value="Angular, jQuery, Underscore"> Angular, jQuery, Underscore <br>
+  <input type="checkbox"  value="Git/Heroku"> Git/Heroku <br>
+  <input type="checkbox"  value="mySQL/Mongo"> mySQL/Mongo
+</form>
+ -->
   <button type="submit">Submit</button>
 
 </form>

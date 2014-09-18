@@ -6,44 +6,14 @@
 
 
 
-<div ng-repeat="profile in users">
-  <div class="userCard">
+<div class="cardCont" >
+  <div class="userCard" ng-repeat="profile in Users">
   <img src="http://placecage.com/c/140/140" alt="">
   <a href="#/user/{{profile.id}}"><h1>{{profile.first_name}} {{profile.last_name}}</h1></a>
   <a href="https://github.com/{{profile.github}}">{{profile.github}}</a>
   <p>{{profile.bio}}</p>
   </div>
+
 </div>
-<div class="cardCont">
-<div class="userCard">
-<img src="http://placecage.com/c/140/140" alt="">
-<a href="#/user/{{profile.id}}"><h1>names</h1></a>
-<a href="https://github.com/{{profile.github}}">dsfaskdjf</a>
-<p>sdfasdf</p>
-</div>
-<div class="userCard">
-<img src="http://placecage.com/c/140/140" alt="">
-<a href="#/user/{{profile.id}}"><h1>names</h1></a>
-<a href="https://github.com/{{profile.github}}">dsfaskdjf</a>
-<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore, ad iure voluptas earum, reprehenderit recusandae suscipit perspiciatis consectetur dolor! Perspiciatis autem adipisci deleniti minima? Repudiandae ab beatae obcaecati facere qui?</p>
-</div>
-<div class="userCard">
-<img src="http://placecage.com/c/140/140" alt="">
-<a href="#/user/{{profile.id}}"><h1>names</h1></a>
-<a href="https://github.com/{{profile.github}}">dsfaskdjf</a>
-<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laudantium facilis in dolore dicta ipsum, natus aperiam excepturi modi officia perspiciatis, hic cum voluptatum neque, error illum impedit id reiciendis sunt!</p>
-</div>
-<div class="userCard">
-<img src="http://placecage.com/c/140/140" alt="">
-<a href="#/user/{{profile.id}}"><h1>names</h1></a>
-<a href="https://github.com/{{profile.github}}">dsfaskdjf</a>
-<p>lorem lorem lorem lorem lorem</p>
-</div>
-<div class="userCard">
-<img src="http://placecage.com/c/140/140" alt="">
-<a href="#/user/{{profile.id}}"><h1>names</h1></a>
-<a href="https://github.com/{{profile.github}}">dsfaskdjf</a>
-<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nihil asperiores vero consectetur? Distinctio odio commodi, quae, harum nihil asperiores optio aspernatur cumque deserunt. Rem commodi accusantium, dignissimos minus, similique odit!</p>
-</div>
-</div>
+
 </div>
