@@ -21,9 +21,17 @@ ActiveRecord::Schema.define(version: 20140917232751) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.string   "email"
-    t.string   "techique"
+    t.string   "technique"
+  end
+
+  create_table "techniques", force: true do |t|
+    t.string   "technique"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+
     t.string   "workflow_state"
     t.string   "technique"
+
   end
 
   create_table "users", force: true do |t|

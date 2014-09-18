@@ -1,25 +1,22 @@
 <div class="container">
-  <h1>{{student.first_name}} {{student.last_name}}</h1>
+  <h1>{{user.first_name}} {{user.last_name}}</h1>
   <div class="navbar">
-    <a href="">{{students[0].github}}</a>
-    <a href="mailto:emailaddress@email.com">email link</a>
+    <a href="">{{user.github}}</a>
+    <a href="mailto:{{user.email}}">email link</a>
   </div>
   <div class="bio">
-    <h2>ABOUT USER</h2>
+    <h2>About Me</h2>
     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eaque rerum corporis at officia aliquid eum. Natus nobis ratione, voluptas asperiores, odit similique accusamus! Alias facilis nemo, labore esse expedita, ullam?</p>
   </div>
   <div class="skills">
-    <h2>USER STRENGHTS</h2>
-      <ul>
-        <li>strength</li>
-        <li>strength</li>
-        <li>strength</li>
+    <h2>My Strengths</h2>
+      <ul ng-repeat="strength in user.strengths">
+        <li>{{strength}} - <a href="" ng-click="match({{strength}})">Get Help</a></li>
       </ul>
-    <h2>USER STRUGS</h2>
-      <ul>
-        <li>strugs</li>
-        <li>strugs</li>
-        <li>strugs</li>
+    <h2>I Need Help With </h2>
+      <ul ng-repeat="strug in user.strugs">
+        <li>{{strug}}</li>
+
       </ul>
   </div>
 </div>
