@@ -1,1 +1,10 @@
+%div.menuNav{"ng-controller" => "userCtrl"}
+  %a{"ng-click" => "isCollapsed = !isCollapsed"}
+    %span
+      %i.fa.fa-bars
+      %div{:collapse => "!isCollapsed"}
+        %div.userlinks
+          .pull-right
+          = user_login_links
+
 %ng-view

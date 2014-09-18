@@ -1,17 +1,13 @@
-
 !!!
-%html{lang: "en", ng: { app: "cdpApp"} }
+%html
   %head
     %title CoDependent
     = stylesheet_link_tag    'application', media: 'all'
     = javascript_include_tag 'application'
     = csrf_meta_tags
     %link{:href => "http://fonts.googleapis.com/css?family=Open+Sans+Condensed:300", :rel => "stylesheet", :type => "text/css"}/
-  %body
-    %p.notice= notice if notice
-    %p.alert= alert if alert
-    user_login_links
+    %link{:href => "http://netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.css", :rel => "stylesheet"}/
+    %link{:href => "//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css", :rel => "stylesheet"}/
+  %body.appBody{lang: "en", ng: { app: "cdpApp"} }
     = yield
-
     %script{:src => "https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"}
-    %script{:src => "../../dist/js/bootstrap.min.js"}

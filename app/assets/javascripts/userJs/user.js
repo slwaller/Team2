@@ -1,12 +1,16 @@
-
 angular.module("cdpApp", [
   "ngRoute",
   "userCtrl",
-  "userSvc"])
+  "userSvc",
+  "ui.bootstrap"])
     .config(function($routeProvider){
       $routeProvider
         .when("/", {
           templateUrl: "../assets/main.html",
+          controller: "userCtrl"
+        })
+        .when("/create", {
+          templateUrl: "../assets/newStudent.html",
           controller: "userCtrl"
         })
         .when("/user", {

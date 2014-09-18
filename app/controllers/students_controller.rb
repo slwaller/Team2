@@ -45,12 +45,36 @@ class StudentsController < ApplicationController
     @student.delete
 
     respond_to do |format|
-      format.json { render json: @delete.as_json }
+      format.json { render json: @student.as_json }
+    end
+  end
+
+  def enable
+    @student = Student.find params[:id]
+    @student.enable!
+    respond_to do |format|
+      format.json { render json: @student.as_json }
     end
     redirect_to students_path
   end
 
 
+  def disable
+    @student = Student.find params[:id]
+    @student.disable!
+    respond_to do |format|
+      format.json { render json: @student.as_json }
+    end
+  end
+
+
+  def dnd
+    @student = Student.find params[:id]
+    @student.dnd!
+    respond_to do |format|
+      format.json { render json: @student.as_json }
+    end
+  end
 
 private
   def student_params
