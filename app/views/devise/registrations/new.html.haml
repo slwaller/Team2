@@ -10,6 +10,48 @@
     %br/
     = f.text_field :last_name, autofocus: true
   %div
+    = f.label :github
+    %br/
+    = f.text_field :github, autofocus: true
+  %div
+    = f.label :bio
+    %br/
+    = f.text_field :bio, autofocus: true
+  %div
+    = f.label :strengths
+    %br/
+    = f.label :HTML_CSS
+    = radio_button_tag :strengths, "HTML/CSS"
+    %br/
+    = f.label :RUBY
+    = radio_button_tag :strengths, "RUBY"
+    %br/
+    = f.label :JS
+    = radio_button_tag :strengths, "JS"
+    %br/
+    = f.label :GIT
+    = radio_button_tag :strengths, "GIT"
+    %br/
+    = f.label :SQL
+    = radio_button_tag :strengths, "SQL"
+  %div
+    = f.label :weakness
+    %br/
+    = f.label :HTML_CSS
+    = radio_button_tag :weakness, "HTML/CSS"
+    %br/
+    = f.label :RUBY
+    = radio_button_tag :weakness, "RUBY"
+    %br/
+    = f.label :JS
+    = radio_button_tag :weakness, "JS"
+    %br/
+    = f.label :GIT
+    = radio_button_tag :weakness, "GIT"
+    %br/
+    = f.label :SQL
+    = radio_button_tag :weakness, "SQL"
+  %div
     = f.label :email
     %br/
     = f.email_field :email, autofocus: true
