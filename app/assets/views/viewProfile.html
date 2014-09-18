@@ -2,24 +2,21 @@
   <h1>{{student.first_name}} {{student.last_name}}</h1>
   <div class="navbar">
     <a href="">{{student.github}}</a>
-    <a href="mailto:emailaddress@email.com">email link</a>
+    <a href="mailto:{{student.email}}">email link</a>
   </div>
   <div class="bio">
-    <h2>ABOUT USER</h2>
+    <h2>About {{student.first_name}}</h2>
     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eaque rerum corporis at officia aliquid eum. Natus nobis ratione, voluptas asperiores, odit similique accusamus! Alias facilis nemo, labore esse expedita, ullam?</p>
   </div>
   <div class="skills">
-    <h2>USER STRENGHTS</h2>
-      <ul>
-        <li>strength</li>
-        <li>strength</li>
-        <li>strength</li>
+    <h2>{{student.first_name}}'s Strengths</h2>
+      <ul ng-repeat="strength in student.strengths">
+        <li>{{strength}}</li>
       </ul>
-    <h2>USER STRUGS</h2>
-      <ul>
-        <li>strugs</li>
-        <li>strugs</li>
-        <li>strugs</li>
+    <h2>{{student.first_name}} Needs Help With </h2>
+      <ul ng-repeat="strug in student.strugs">
+        <li>{{strug}}</li>
+
       </ul>
   </div>
 </div>

@@ -7,6 +7,7 @@ angular.module("cdpApp")
 
     userSvc.getStudentProfile().success(function(student){
       $scope.student = student;
+      console.log(student);
 
     });
 
