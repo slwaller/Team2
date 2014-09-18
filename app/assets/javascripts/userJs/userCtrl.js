@@ -11,4 +11,10 @@ angular.module("cdpApp")
 
     });
 
+    var createStudent = function (student){
+
+      userSvc.createStud(student);
+    };
+
+
   });

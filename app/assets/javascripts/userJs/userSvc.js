@@ -11,11 +11,16 @@ angular.module("cdpApp")
       return $http.get(studentsUrl + "/" + id);
     };
 
+    var createStud = function(student){
+      return $http.post(student);
+    };
+
 
 
     return{
       getStudents: getStudents,
-      getStudentProfile: getStudentProfile
+      getStudentProfile: getStudentProfile,
+      createStud: createStud
 
     }
 
