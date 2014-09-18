@@ -3,14 +3,22 @@ $grey: rgb(48, 48, 48);
 $sea: rgb(161, 226, 214);
 $ltgrey: rgb(71, 71, 71);
 $bkg: rgb(5, 5, 5);
+$moodSea: rgb(56, 188, 151);
 
 
 .appBody{
   margin: 0;
   font-family: 'Open Sans Condensed';
   width: 100%;
-  color: $ltgrey;
+  color: white;
   background-color: $bkg;
+  a{
+    color: $sea;
+    &:hover{
+      color: $moodSea;
+    }
+  }
+
 }
 
 /* MENU ICON NAV AT TOP */
@@ -128,5 +136,29 @@ $bkg: rgb(5, 5, 5);
       left: 7%;
       text-shadow: 0px 1px 6px $ltgrey;
     }
+  }
+}
+
+.cardCont{
+  width: 90%;
+  margin: auto;
+  text-align: center;
+}
+.userCard{
+  letter-spacing: 1px;
+  padding: 8px;
+  display: inline-block;
+  width: 20%;
+  height: 300px;
+  overflow-y: scroll;
+  vertical-align: top;
+  margin: 10px;
+  margin-bottom: 30px;
+  border: 1px solid $ltgrey;
+  box-shadow: none;
+  transition: all .5 ease;
+  &:hover{
+    box-shadow:0 0 1em white;
+    transition: all .7s ease;
   }
 }

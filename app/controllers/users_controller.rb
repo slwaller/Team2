@@ -3,7 +3,6 @@ class UsersController < ApplicationController
 
   def index
     @users = User.all
-
     respond_to do |format|
       format.json { render json: @users.as_json }
     end
@@ -13,12 +12,6 @@ class UsersController < ApplicationController
     @user = User.new
   end
 
-  def create
-    @user = User.create user_params
-    respond_to do |format|
-      format.json { render json: @user.as_json }
-    end
-  end
 
   def new
     @user = User.new
@@ -45,18 +38,12 @@ class UsersController < ApplicationController
 
   def show
     @user = User.find params[:id]
-
-    respond_to do |format|
-      format.json { render json: @user.as_json }
-    end
-  end 
-
-  def show
-    @user = User.find params[:id]
     respond_to do |format|
       format.json { render json: @user.as_json }
     end
   end
+
+
 
   def destroy
     @user = User.find params[:id]
