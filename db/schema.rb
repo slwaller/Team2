@@ -11,11 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-<<<<<<< HEAD
-ActiveRecord::Schema.define(version: 20140917184910) do
-=======
-ActiveRecord::Schema.define(version: 20140917232751) do
->>>>>>> 50cc975822bf7c5082d19bbea84cecfc00e966ef
+ActiveRecord::Schema.define(version: 20140918134950) do
 
   create_table "students", force: true do |t|
     t.string   "first_name"
@@ -26,11 +22,8 @@ ActiveRecord::Schema.define(version: 20140917232751) do
     t.datetime "updated_at"
     t.string   "email"
     t.string   "techique"
-<<<<<<< HEAD
-=======
     t.string   "workflow_state"
     t.string   "technique"
->>>>>>> 50cc975822bf7c5082d19bbea84cecfc00e966ef
   end
 
   create_table "techniques", force: true do |t|
@@ -54,6 +47,10 @@ ActiveRecord::Schema.define(version: 20140917232751) do
     t.datetime "updated_at"
     t.string   "first_name"
     t.string   "last_name"
+    t.string   "bio"
+    t.string   "github"
+    t.string   "strengths"
+    t.string   "weakness"
   end
 
   add_index "users", ["email"], name: "index_users_on_email", unique: true, using: :btree
