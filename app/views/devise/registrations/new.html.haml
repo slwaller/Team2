@@ -56,6 +56,10 @@
     %br/
     = f.email_field :email, autofocus: true
   %div
+    = f.label :img_url
+    %br/
+    = f.text_field :img_url, autofocus: true
+  %div
     = f.label :password
     - if @validatable
       %i
