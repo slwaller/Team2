@@ -3,6 +3,7 @@ $grey: rgb(48, 48, 48);
 $sea: rgb(161, 226, 214);
 $ltgrey: rgb(71, 71, 71);
 $bkg: rgb(5, 5, 5);
+$white: rgb(239, 239, 239);
 $moodSea: rgb(56, 188, 151);
 
 
@@ -10,7 +11,7 @@ $moodSea: rgb(56, 188, 151);
   margin: 0;
   font-family: 'Open Sans Condensed';
   width: 100%;
-  color: $ltgrey;
+  color: $white;
   background-color: $bkg;
   a{
     color: $sea;
@@ -28,6 +29,7 @@ $moodSea: rgb(56, 188, 151);
   font-family: 'Open Sans Condensed';
   padding: 0;
   margin: 0;
+  position: fixed;
   span{
     padding-right: 20px;
   }
@@ -155,9 +157,70 @@ $moodSea: rgb(56, 188, 151);
     border: 1px solid $ltgrey;
     box-shadow: none;
     transition: all .5 ease;
+    text-align: center;
     &:hover{
       box-shadow:0 0 1em white;
       transition: all .7s ease;
     }
+
   }
+}
+
+/* PROFILE.HTML */
+.mainProfile{
+  font-family: 'Open Sans Condensed';
+  width: 100%;
+  margin: auto;
+  margin-top: 10px;
+  h1{
+    font-size: 70px;
+    margin-bottom: 20px;
+  }
+  text-align: center;
+  aside{
+    width: 48%;
+    float: left;
+    vertical-align: top;
+    margin-right: 8px;
+    display: block;
+    text-align: right;
+    img{
+      border: 10px solid $white;
+    }
+    p{
+      font-size: 14px;
+      text-align: center;
+    }
+  }
+  section{
+    text-align: left;
+    width: 48%;
+    float: left;
+    margin-bottom: 60px;
+    margin-left: 8px;
+    p{
+      font-size: 18px;
+    }
+    h2{
+      margin-top: 0px;
+    }
+    h3{
+      margin-top: 0px;
+    }
+    .helpButton{
+      margin-top: 8px;
+      font-size: 20px;
+      padding: 3px;
+      border: 1px solid $sea;
+      &:hover{
+        border: 1px solid $moodSea;
+      }
+    }
+  }
+}
+
+.myTutors{
+  width: 700px;
+  margin: auto;
+  margin-top: 50px;
 }

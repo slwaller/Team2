@@ -1,18 +1,32 @@
-<a href="#/">Home</a>
 <div class="container">
-  <h1>{{User.first_name}} {{User.last_name}}</h1>
-  <div class="navbar">
-    <a href="http://github.com/{{User.github}}">{{User.github}}</a>
-    <a href="mailto:{{user.email}}">email link</a>
-  </div>
-  <div class="bio">
-    <h2>About {{User.first_name}}</h2>
-    <p>{{User.bio}}</p>
-  </div>
-  <div class="skills">
-    <h2>{{User.first_name}}'s strength: {{User.strengths}}</h2>
+<div class="logo">
+  <h1 class="codependent">CODEPENDENT</h1>
+</div>
+<div class="container">
+  <div class="mainProfile">
+    <h1>{{User.first_name}} {{User.last_name}}</h1>
+    <aside>
+      <img src="{{User.img_url}}" alt="" style="width: 250px; border-radius: 1%;">
+    </aside>
 
-    <h2>{{User.first_name}}'s strug: {{User.weakness}}</h2>
+    <section>
+      <div class="bio">
+        <h2>Contact {{User.first_name}}</h2>
+        <div class="myLinks">
+          <p>Github: <a href="http://github.com/{User.github}}">{{User.github}}</a></p>
+          <p>Email: <a href="mailto:{{User.email}}">{{User.email}}</a></p>
+        </div>
+        <h3>Bio</h3>
+        <p>{{User.bio}}</p>
+      </div>
+
+      <div class="skills">
+        <h2>Current Strength: {{User.strengths}}</h2>
+        <h2>Current Strug: {{User.weakness}}</h2>
+      </div>
+    </section>
+  </div>
+
 
   </div>
 </div>

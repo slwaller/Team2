@@ -1,39 +1,43 @@
 <div class="container">
-  <h1>{{currentUser.first_name}} {{currentUser.last_name}}</h1>
-  <a href="/users/edit">Edit Profile</a>
-  <div class="bio">
-    <h2>About Me</h2>
-    <div class="navbar">
-      <a href="http://github.com/{currentUser.github}}">{{currentUser.github}}</a>
-      <a href="mailto:{{currentUser.email}}">{{currentUser.email}}</a>
-
-    </div>
-    <p>{{currentUser.bio}}</p>
-  </div>
-  <div class="skills">
-    <h2>Current Strength</h2>
-      <ul>
-        <li>{{currentUser.strengths}}
-      </ul>
-    <h2>I Need Help With </h2>
-      <ul>
-        <li>{{currentUser.weakness}} - <a href="">Get Help</a></li>
-        <ul ng-repeat="user in Users | matchFilter : currentUser">
-          <li>{{user.first_name}}</li>
-        </ul>
-      </ul>
-  </div>
+<div class="logo">
+  <h1 class="codependent">CODEPENDENT</h1>
 </div>
-<div class="edit" ng-show="edit">
-<form action="" ng-submit="editUser($index)" >
-  <input type="text" ng-model="currentUser.first_name" placeholder="{{currentUser.first_name}}">
-  <input type="text" ng-model="currentUser.last_name" placeholder="{{currentUser.last_name}}">
-  <input type="text" ng-model="currentUser.github" placeholder="{{currentUser.github}}">
-  <textarea name="bio" placeholder="Bio" ng-model="currentUser.bio" id="" cols="30" rows="10">{{currentUser.bio}}</textarea>
-  <br>
-  <p>Strengths</p>
+<div class="container">
 
-  <button type="submit">Submit</button>
+  <div class="mainProfile">
+    <h1>{{currentUser.first_name}} {{currentUser.last_name}}</h1>
+    <aside>
+      <img src="{{currentUser.img_url}}" alt="" style="width: 250px; border-radius: 1%;"> <br>
+      <p><a href="/users/edit">Edit Profile</a></p>
+    </aside>
 
-</form>
+    <section>
+      <div class="bio">
+        <h2>About Me</h2>
+        <div class="myLinks">
+          <p>Github: <a href="http://github.com/{currentUser.github}}">{{currentUser.github}}</a></p>
+          <p>Email: <a href="mailto:{{currentUser.email}}">{{currentUser.email}}</a></p>
+        </div>
+        <h3>Bio</h3>
+        <p>{{currentUser.bio}}</p>
+      </div>
+
+      <div class="skills">
+        <h2>Current Strength: {{currentUser.strengths}}</h2>
+        <h2>I Need Help With: {{currentUser.weakness}}</h2>
+        <a class="helpButton" ng-click="help=!help">FIND PEER TUTORS</a>
+      </div>
+    </section>
+  </div>
+
+  <div class="cardContainer" ng-show="help">
+<!--     <h2>Your Matches</h2> -->
+      <div class="userCard" ng-repeat="user in Users | matchFilter : currentUser">
+        <img src="{{user.img_url}}" alt="" style="width: 140px;">
+        <a href="#/user/{{user.id}}"><h1>{{user.first_name}} {{user.last_name}}</h1></a>
+        <a href="https://github.com/{{user.github}}">{{user.github}}</a>
+        <p>CONTACT: <a href="mailto:{{user.email}}">{{user.email}}</a></p>
+      </div>
+    </div>
+  </div>
 </div>
