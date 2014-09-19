@@ -1,10 +1,14 @@
 class UsersController < ApplicationController
   before_action :authenticate_user!
+  respond_to :json
 
   def index
     @users = User.all
-    respond_to do |format|
-      format.json { render json: @users.as_json }
+    @user = current_user
+    p @user
+    respond_with(@users, @user) do |format|
+      format.html
+      format.json { render :json => { users: @users.as_json, user: @user.as_json } }
     end
   end
 
