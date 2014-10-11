@@ -18,7 +18,7 @@ angular.module("cdpApp", [
           templateUrl: "../assets/matches.html",
           controller: "userCtrl"
         })
-        .when("/student/:id", {
+        .when("/user/:id", {
           templateUrl: "../assets/viewProfile.html",
           controller: "userCtrl"
         })

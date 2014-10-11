@@ -1,23 +1,32 @@
-<a href="#/">Home</a>
 <div class="container">
-  <h1>{{student.first_name}} {{student.last_name}}</h1>
-  <div class="navbar">
-    <a href="">{{student.github}}</a>
-    <a href="mailto:{{student.email}}">email link</a>
-  </div>
-  <div class="bio">
-    <h2>About {{student.first_name}}</h2>
-    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eaque rerum corporis at officia aliquid eum. Natus nobis ratione, voluptas asperiores, odit similique accusamus! Alias facilis nemo, labore esse expedita, ullam?</p>
-  </div>
-  <div class="skills">
-    <h2>{{student.first_name}}'s Strengths</h2>
-      <ul ng-repeat="strength in student.strengths">
-        <li>{{strength}}</li>
-      </ul>
-    <h2>{{student.first_name}} Needs Help With </h2>
-      <ul ng-repeat="strug in student.strugs">
-        <li>{{strug}}</li>
+<div class="logo">
+  <h1 class="codependent">CODEPENDENT</h1>
+</div>
+<div class="container">
+  <div class="mainProfile">
+    <h1>{{User.first_name}} {{User.last_name}}</h1>
+    <aside>
+      <img src="{{User.img_url}}" alt="" style="width: 250px; border-radius: 1%;">
+    </aside>
 
-      </ul>
+    <section>
+      <div class="bio">
+        <h2>Contact {{User.first_name}}</h2>
+        <div class="myLinks">
+          <p>Github: <a href="http://github.com/{User.github}}">{{User.github}}</a></p>
+          <p>Email: <a href="mailto:{{User.email}}">{{User.email}}</a></p>
+        </div>
+        <h3>Bio</h3>
+        <p>{{User.bio}}</p>
+      </div>
+
+      <div class="skills">
+        <h2>Current Strength: {{User.strengths}}</h2>
+        <h2>Current Strug: {{User.weakness}}</h2>
+      </div>
+    </section>
+  </div>
+
+
   </div>
 </div>

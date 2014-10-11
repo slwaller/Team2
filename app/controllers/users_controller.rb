@@ -1,11 +1,14 @@
 class UsersController < ApplicationController
   before_action :authenticate_user!
+  respond_to :json
 
   def index
     @users = User.all
-
-    respond_to do |format|
-      format.json { render json: @users.as_json }
+    @user = current_user
+    p @user
+    respond_with(@users, @user) do |format|
+      format.html
+      format.json { render :json => { users: @users.as_json, user: @user.as_json } }
     end
   end
 
@@ -13,12 +16,6 @@ class UsersController < ApplicationController
     @user = User.new
   end
 
-  def create
-    @user = User.create user_params
-    respond_to do |format|
-      format.json { render json: @user.as_json }
-    end
-  end
 
   def new
     @user = User.new
@@ -43,13 +40,7 @@ class UsersController < ApplicationController
     end
   end
 
-  def show
-    @user = User.find params[:id]
 
-    respond_to do |format|
-      format.json { render json: @user.as_json }
-    end
-  end 
 
   def show
     @user = User.find params[:id]
@@ -57,6 +48,8 @@ class UsersController < ApplicationController
       format.json { render json: @user.as_json }
     end
   end
+
+
 
   def destroy
     @user = User.find params[:id]
@@ -94,6 +87,12 @@ class UsersController < ApplicationController
 
 private
   def user_params
+
+
     params.require(:user).permit(:first_name, :last_name, :bio, :github, :email, :strengths, :weakness)
+
+
+    params.require(:user).permit(:first_name, :last_name, :bio, :github, :email, :strengths, :weakness)
+
   end
 end
